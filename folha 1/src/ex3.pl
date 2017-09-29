@@ -2,7 +2,8 @@
 
 
 livro(osMaias).
-autor(eçadeQueirós).
+autor(eçadeQueirós, romance).
+autor(eçadeQueirós, ficcao).
 nacionalidade(português).
 nacionalidade(inglês).
 tipo(romance).
@@ -12,3 +13,5 @@ escreveu(eçadeQueirós, osMaias).
 natural(eçadeQueirós,português).
 
 autorptRomance(X) :- escreveu(X, Y), tipolivro(Y,romance), natural(X,português).
+
+autortipo_eoutro(X, Y) :- autor(X, Y), autor(X, Z), Y\=Z.
